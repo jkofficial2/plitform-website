@@ -1,0 +1,161 @@
+{
+  "mode": "demo",
+  "pages": [
+    {
+      "path": "/404.html",
+      "title": "Страница не найдена — ПлитФорм",
+      "description": "Эта страница не найдена. Перейдите в каталог бетонных плит завода «ПлитФорм» или свяжитесь с нами.",
+      "h1": "Здесь пока нет плиты.И страницы тоже.",
+      "htmlBytes": 5646
+    },
+    {
+      "path": "/",
+      "title": "Бетонные плиты в Ростове-на-Дону — завод «ПлитФорм»",
+      "description": "Дорожные плиты, плиты перекрытий и плиты по спецификации. Завод «ПлитФорм»: запрос цены и сроков для объектов в Ростове-на-Дону и Ростовской области.",
+      "h1": "Бетонные плиты от производителя",
+      "htmlBytes": 17796
+    },
+    {
+      "path": "/kontakty/",
+      "title": "Контакты и запрос цены на бетонные плиты — ПлитФорм, Ростов-на-Дону",
+      "description": "Связь с заводом «ПлитФорм». Подготовьте запрос на дорожные плиты, плиты перекрытий или изделия по спецификации в Ростове-на-Дону и Ростовской области.",
+      "h1": "Начнём с вашей задачи",
+      "htmlBytes": 16424
+    },
+    {
+      "path": "/produktsiya/dorozhnye-plity/",
+      "title": "Дорожные плиты в Ростове-на-Дону — завод «ПлитФорм»",
+      "description": "Для подъездных путей, временных дорог и площадок. Дорожные плиты от завода «ПлитФорм» для объектов в Ростове-на-Дону и Ростовской области. Уточните характеристики, цену и сроки.",
+      "h1": "Дорожные плиты",
+      "htmlBytes": 10849
+    },
+    {
+      "path": "/produktsiya/",
+      "title": "Каталог бетонных плит в Ростове-на-Дону — ПлитФорм",
+      "description": "Каталог завода «ПлитФорм»: дорожные плиты, плиты перекрытий и изделия по спецификации для объектов в Ростове-на-Дону и Ростовской области.",
+      "h1": "Бетонные плиты",
+      "htmlBytes": 11906
+    },
+    {
+      "path": "/produktsiya/plity-perekrytiy/",
+      "title": "Плиты перекрытий в Ростове-на-Дону — завод «ПлитФорм»",
+      "description": "Для межэтажных перекрытий по проекту здания. Плиты перекрытий от завода «ПлитФорм» для объектов в Ростове-на-Дону и Ростовской области. Уточните характеристики, цену и сроки.",
+      "h1": "Плиты перекрытий",
+      "htmlBytes": 10810
+    },
+    {
+      "path": "/produktsiya/plity-po-spetsifikatsii/",
+      "title": "Плиты по спецификации в Ростове-на-Дону — завод «ПлитФорм»",
+      "description": "Для задач с особыми размерами и требованиями. Плиты по спецификации от завода «ПлитФорм» для объектов в Ростове-на-Дону и Ростовской области. Уточните характеристики, цену и сроки.",
+      "h1": "Плиты по спецификации",
+      "htmlBytes": 10970
+    }
+  ],
+  "localReferences": 199,
+  "assets": [
+    {
+      "path": "_astro/Layout.BrK8Ygpi.css",
+      "bytes": 25074
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_1LV1jy.webp",
+      "bytes": 16936
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_26GhHk.webp",
+      "bytes": 91668
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_Z1Wk5L2.webp",
+      "bytes": 30272
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_Z2ooHer.webp",
+      "bytes": 117768
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_ZRnIER.webp",
+      "bytes": 47804
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_ZVyl1i.webp",
+      "bytes": 65228
+    },
+    {
+      "path": "_astro/bespoke.BrsfCOIw_ZlSvHV.webp",
+      "bytes": 200482
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_2c5Va4.webp",
+      "bytes": 18562
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_2j0PxD.webp",
+      "bytes": 66686
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_Z1N3Qnb.webp",
+      "bytes": 90726
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_Z1QinyO.webp",
+      "bytes": 49200
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_Z1mmbXv.webp",
+      "bytes": 32492
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_Z298Kos.webp",
+      "bytes": 189652
+    },
+    {
+      "path": "_astro/hollow-core.D6HXqqrL_Z2eY43q.webp",
+      "bytes": 116840
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_1RkfFD.webp",
+      "bytes": 93692
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_1n5M05.webp",
+      "bytes": 82646
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_2ucTnm.webp",
+      "bytes": 15938
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_TT0PV.webp",
+      "bytes": 47730
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_Z1FStyf.webp",
+      "bytes": 64280
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_Z1OHTfA.webp",
+      "bytes": 37848
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_Z55aKP.webp",
+      "bytes": 203950
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_ZDFYpq.webp",
+      "bytes": 203950
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_ZOBOl.webp",
+      "bytes": 29264
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_ZpTRHT.webp",
+      "bytes": 149640
+    },
+    {
+      "path": "_astro/yard.CDAjPK9w_ZyUMXA.webp",
+      "bytes": 118916
+    }
+  ]
+}

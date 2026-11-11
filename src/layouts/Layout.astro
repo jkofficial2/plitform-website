@@ -1,0 +1,56 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { Crumb } from '../components/Breadcrumbs.astro';
+import { factory, liveSite } from '../data/factory';
+import '../styles/global.css';
+interface Props { title: string; description: string; breadcrumbs?: Crumb[]; noindex?: boolean; }
+const { title, description, breadcrumbs = [], noindex = false } = Astro.props;
+const canonical = liveSite && !noindex ? new URL(Astro.url.pathname, liveSite).href : undefined;
+const organization = liveSite ? {
+  '@context': 'https://schema.org', '@type': 'Organization',
+  '@id': `${liveSite}/#organization`, name: factory.name, url: `${liveSite}/`,
+  telephone: factory.phone, email: factory.email,
+  areaServed: factory.region, ...(factory.address ? { address: factory.address } : {}),
+} : undefined;
+const breadcrumbData = liveSite && breadcrumbs.length && !noindex ? {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [{ label: 'Главная', href: '/' }, ...breadcrumbs].map((item, index) => ({
+    '@type': 'ListItem', position: index + 1, name: item.label,
+    item: new URL(item.href ?? Astro.url.pathname, liveSite).href,
+  })),
+} : undefined;
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {(factory.demo || noindex) && <meta name="robots" content="noindex, follow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta name="theme-color" content="#F7F4EF" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content={factory.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={liveSite ? `${liveSite}/og-image.jpg` : '/og-image.jpg'} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ПлитФорм — бетонные плиты. Демонстрационное изображение" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {organization && <script type="application/ld+json" set:html={safeJson(organization)} />}
+    {breadcrumbData && <script type="application/ld+json" set:html={safeJson(breadcrumbData)} />}
+  </head>
+  <body id="top">
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
+    <Header />
+    <main id="main" tabindex="-1"><slot /></main>
+    <Footer />
+  </body>
+</html>

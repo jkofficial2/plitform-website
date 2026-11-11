@@ -1,0 +1,19 @@
+---
+import Brand from './Brand.astro';
+import Icon from './Icon.astro';
+import { factory, phoneHref, emailHref } from '../data/factory';
+import { products, productHref, requestHref } from '../data/products';
+const selectedProduct = products.find(product => productHref(product.slug) === Astro.url.pathname);
+---
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div><Brand /><p class="small muted footer-region">{factory.region}</p></div>
+    <nav aria-label="Навигация в подвале"><a href="/produktsiya/">Продукция</a><a href="/#kak-zakazat">Как заказать</a><a href="/kontakty/">Контакты</a></nav>
+    <div class="footer-contacts">{phoneHref ? <a href={phoneHref}>{factory.phone}</a> : <span>{factory.phone}</span>}{emailHref ? <a href={emailHref}>{factory.email}</a> : <span class="muted small">Телефон и почта появятся<br />после заполнения данных завода</span>}</div>
+  </div>
+  <div class="container footer-bottom"><span>© {new Date().getFullYear()} {factory.name}</span><span>{factory.demo ? 'Демонстрационная версия' : 'Бетонные плиты под задачи вашего объекта'}</span><a href="#top">Наверх <span aria-hidden="true">↑</span></a></div>
+</footer>
+<nav class="mobile-actions" aria-label="Быстрая связь">
+  <a class="button button-outline" href={phoneHref ?? '/kontakty/#kontakty-zavoda'}><Icon name="phone" />Позвонить</a>
+  <a class="button" href={requestHref(selectedProduct?.slug)}>Запросить цену<Icon /></a>
+</nav>

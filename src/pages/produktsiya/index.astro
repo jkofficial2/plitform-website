@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import ContactBand from '../../components/ContactBand.astro';
+import Icon from '../../components/Icon.astro';
+import { products } from '../../data/products';
+const breadcrumbs = [{ label: 'Продукция' }];
+---
+<Layout title="Каталог бетонных плит в Ростове-на-Дону — ПлитФорм" description="Каталог завода «ПлитФорм»: дорожные плиты, плиты перекрытий и изделия по спецификации для объектов в Ростове-на-Дону и Ростовской области." breadcrumbs={breadcrumbs}>
+  <div class="container"><Breadcrumbs items={breadcrumbs} /><section class="page-intro"><span class="eyebrow">КАТАЛОГ / ТРИ НАПРАВЛЕНИЯ</span><h1>Бетонные плиты</h1><p>Для дороги, здания или индивидуального проекта.<br class="desktop-break" /> Выберите категорию, чтобы уточнить детали и подготовить запрос.</p></section><section class="catalog-section" aria-labelledby="catalog-heading"><h2 id="catalog-heading" class="sr-only">Категории бетонных плит</h2><div class="product-grid">{products.map((product, index) => <ProductCard product={product} eager={index === 0} />)}</div><p class="catalog-note"><span class="status-dot"></span>Размеры, нагрузки, цены и наличие подтверждаются заводом для выбранных изделий.</p></section><aside class="catalog-help"><Icon name="file" size={36} /><div><h2>Не знаете, какие плиты нужны?</h2><p>Опишите задачу своими словами или укажите данные из проекта.</p></div><a href="/kontakty/#zayavka" class="text-link">Обсудить задачу<Icon /></a></aside></div>
+  <ContactBand />
+</Layout>

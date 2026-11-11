@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+import { factory, phoneHref } from '../data/factory';
+---
+<section class="contact-band" aria-labelledby="contact-heading"><div class="container contact-band-inner"><div><span class="eyebrow light">НАЧНЁМ С ВАШЕЙ ЗАДАЧИ</span><h2 id="contact-heading">Нужны плиты<br />для вашего объекта?</h2><p>Укажите вид плит и количество, чтобы запросить цену и сроки.</p></div><div class="contact-band-actions"><a class="button button-light" href="/kontakty/#zayavka">Запросить цену<Icon /></a>{phoneHref ? <a class="contact-band-phone" href={phoneHref}>{factory.phone}</a> : <span class="small light">Рабочие контакты появятся<br />после заполнения данных завода.</span>}<a class="light small" href="/kontakty/">Все контакты <span aria-hidden="true">↗</span></a></div></div></section>

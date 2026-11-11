@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RequestForm from '../../components/RequestForm.astro';
+import Icon from '../../components/Icon.astro';
+import { factory, phoneHref, emailHref } from '../../data/factory';
+const breadcrumbs = [{ label: 'Контакты' }];
+---
+<Layout title="Контакты и запрос цены на бетонные плиты — ПлитФорм, Ростов-на-Дону" description="Связь с заводом «ПлитФорм». Подготовьте запрос на дорожные плиты, плиты перекрытий или изделия по спецификации в Ростове-на-Дону и Ростовской области." breadcrumbs={breadcrumbs}>
+  <div class="container"><Breadcrumbs items={breadcrumbs} /><section class="page-intro contacts-intro"><span class="eyebrow">КОНТАКТЫ / ОБСУДИМ ВАШ ОБЪЕКТ</span><h1>Начнём с вашей задачи</h1><p>Расскажите, какие плиты нужны.<br class="desktop-break" /> Подготовьте письмо с запросом цены и сроков.</p></section><div class="contacts-grid"><section class="contact-details" id="kontakty-zavoda" aria-labelledby="factory-contacts-heading"><span class="eyebrow">ПРЯМАЯ СВЯЗЬ</span><h2 id="factory-contacts-heading">{factory.name}</h2><dl><div><dt><Icon name="phone" />Телефон</dt><dd>{phoneHref ? <a class="contact-value" href={phoneHref}>{factory.phone}</a> : <><span class="contact-value">{factory.phone}</span><span class="contact-explanation">Демонстрационный номер. Рабочий телефон появится после заполнения данных завода.</span></>}</dd></div><div><dt><Icon name="mail" />Электронная почта</dt><dd>{emailHref ? <a class="contact-value" href={emailHref}>{factory.email}</a> : <><span class="contact-value">{factory.email}</span><span class="contact-explanation">Демонстрационный адрес. Рабочая почта появится после заполнения данных завода.</span></>}</dd></div><div><dt><Icon name="pin" />Регион</dt><dd>{factory.region}</dd></div>{factory.address && <div><dt>Адрес завода</dt><dd>{factory.address}</dd></div>}{factory.hours && <div><dt>Часы работы</dt><dd>{factory.hours}</dd></div>}</dl>{factory.directionsUrl && <a href={factory.directionsUrl} class="text-link" target="_blank" rel="noopener noreferrer">Схема проезда<Icon /></a>}<div class="contact-note"><Icon name="file" size={27} /><p>Есть чертёж или спецификация? Приложите файл к письму в своём почтовом приложении.</p></div></section><RequestForm /></div></div>
+</Layout>

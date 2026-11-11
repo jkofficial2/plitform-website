@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.sites-runtime/
+.qa-live/
+reports/*.report.html
+reports/*.report.json
+reports/screenshots/

@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro';
+import { factory } from '../data/factory';
+import { products } from '../data/products';
+---
+<section class="request-form-section" id="zayavka" aria-labelledby="form-heading">
+  <span class="eyebrow">ЗАПРОС ЦЕНЫ И СРОКОВ</span><h2 id="form-heading">Несколько деталей<br />о вашем заказе</h2><p class="form-intro">Укажите вид плит и количество, чтобы запросить цену и сроки. Поля со звёздочкой обязательны.</p>
+  {factory.demo && <p class="form-demo"><span class="status-dot"></span>Деморежим: можно подготовить и скопировать пример письма.</p>}
+  <form id="request-form" data-demo={String(factory.demo)} data-recipient={factory.demo ? '' : factory.email}>
+    <div class="form-row"><div class="field"><label for="customer-name">Ваше имя <span aria-hidden="true">*</span></label><input id="customer-name" name="name" type="text" required autocomplete="name" maxlength="100" placeholder="Как к вам обращаться" aria-describedby="name-error" /><span class="field-error" id="name-error"></span></div><div class="field"><label for="customer-contact">Телефон или email <span aria-hidden="true">*</span></label><input id="customer-contact" name="contact" type="text" required autocomplete="email" maxlength="200" placeholder="Для ответа на запрос" aria-describedby="contact-error" /><span class="field-error" id="contact-error"></span></div></div>
+    <div class="field"><label for="product-category">Вид плит</label><select id="product-category" name="category"><option value="">Укажу в описании заказа</option>{products.map(product => <option value={product.slug}>{product.name}</option>)}</select></div>
+    <div class="field"><label for="order-description">Количество, размеры и описание заказа <span aria-hidden="true">*</span></label><textarea id="order-description" name="order" rows="4" required maxlength="3000" placeholder="Например: дорожные плиты для подъезда к участку, 20 штук. Размеры нужно уточнить." aria-describedby="order-help order-error"></textarea><span class="field-help" id="order-help">Если не знаете название плит, опишите задачу своими словами.</span><span class="field-error" id="order-error"></span></div>
+    <div class="field"><label for="delivery-city">Город доставки</label><input id="delivery-city" name="city" type="text" autocomplete="address-level2" maxlength="150" placeholder="Например, Ростов-на-Дону" /></div>
+    <div class="field"><label for="order-comment">Комментарий</label><textarea id="order-comment" name="comment" rows="2" maxlength="2000" placeholder="Желаемые сроки и другие детали, если нужно"></textarea></div>
+    <button type="submit" class="button form-submit" id="prepare-button" disabled>Подготовить письмо<Icon /></button><p class="form-privacy">Сайт подготовит текст заявки. Вы сами отправите письмо из своей почты. Данные формы не сохраняются на сайте.</p>
+  </form>
+  <noscript><p class="noscript-note">Для подготовки письма включите JavaScript. Можно написать заявку самостоятельно: укажите имя, контакт для ответа, вид плит и количество.{factory.demo ? ' Рабочая почта появится после заполнения данных завода.' : ` Отправьте письмо на ${factory.email}.`}</p></noscript>
+  <section class="prepared-request" id="prepared-request" hidden aria-labelledby="prepared-heading"><span class="eyebrow">{factory.demo ? 'ПРИМЕР ПИСЬМА' : 'ПИСЬМО ПОДГОТОВЛЕНО'}</span><h3 id="prepared-heading" tabindex="-1">Проверьте вашу заявку</h3><p class="small">Тема: <strong>Запрос цены на бетонные плиты</strong></p><label for="request-text">Текст письма</label><textarea id="request-text" readonly rows="12" spellcheck="false"></textarea><div class="prepared-actions">{!factory.demo && <a id="open-email" class="button" href={`mailto:${factory.email}`}>Открыть в почте<Icon name="mail" /></a>}<button type="button" class="button button-outline" id="copy-request"><Icon name="copy" />Скопировать заявку</button></div>{factory.demo ? <p class="small muted">Это пример письма. Рабочая почта появится после заполнения данных завода.</p> : <p class="small muted">Или отправьте вручную на <a href={`mailto:${factory.email}`}>{factory.email}</a>. Чертёж можно приложить в почтовом приложении.</p>}<p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></section>
+</section>
+<script>
+  import '../scripts/request-form';
+</script>

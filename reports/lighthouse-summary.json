@@ -1,0 +1,342 @@
+[
+  {
+    "mode": "demo",
+    "slug": "home",
+    "path": "/",
+    "port": 4321,
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "metrics": {
+      "first-contentful-paint": 902.1331,
+      "largest-contentful-paint": 2252.1331,
+      "speed-index": 902.1331,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "score": 0.94,
+        "displayValue": "2.3 s"
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "score": 0.99,
+        "displayValue": "2.3 s"
+      },
+      {
+        "id": "is-crawlable",
+        "title": "Page is blocked from indexing",
+        "score": 0
+      },
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 12 KiB"
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 100 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:00.879Z",
+    "report": "reports/lighthouse-demo-home.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "home",
+    "path": "/",
+    "port": 4322,
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 902.5307,
+      "largest-contentful-paint": 2252.5307000000003,
+      "speed-index": 902.5307,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "score": 0.94,
+        "displayValue": "2.3 s"
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "score": 0.99,
+        "displayValue": "2.3 s"
+      },
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 12 KiB"
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 150 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:10.740Z",
+    "report": "reports/lighthouse-live-home.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "catalog",
+    "path": "/produktsiya/",
+    "port": 4322,
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 901.5011,
+      "largest-contentful-paint": 1951.5011,
+      "speed-index": 901.5011,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "score": 0.97,
+        "displayValue": "2.0 s"
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "score": 0.99,
+        "displayValue": "2.0 s"
+      },
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 260 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:20.631Z",
+    "report": "reports/lighthouse-live-catalog.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "road",
+    "path": "/produktsiya/dorozhnye-plity/",
+    "port": 4322,
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 901.1796999999999,
+      "largest-contentful-paint": 1501.1797,
+      "speed-index": 901.1796999999999,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 300 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:30.498Z",
+    "report": "reports/lighthouse-live-road.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "floor",
+    "path": "/produktsiya/plity-perekrytiy/",
+    "port": 4322,
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 900.9905000000001,
+      "largest-contentful-paint": 1500.9905,
+      "speed-index": 900.9905000000001,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 260 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:40.375Z",
+    "report": "reports/lighthouse-live-floor.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "custom",
+    "path": "/produktsiya/plity-po-spetsifikatsii/",
+    "port": 4322,
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 901.2672,
+      "largest-contentful-paint": 1501.2672,
+      "speed-index": 901.2672,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 8 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 260 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:35:50.195Z",
+    "report": "reports/lighthouse-live-custom.report.html"
+  },
+  {
+    "mode": "live",
+    "slug": "contacts",
+    "path": "/kontakty/",
+    "port": 4322,
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 900.9682,
+      "largest-contentful-paint": 900.9682,
+      "speed-index": 900.9682,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "failures": [
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "score": 0.5,
+        "displayValue": "Est savings of 11 KiB"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "score": 0,
+        "displayValue": "Est savings of 150 ms"
+      }
+    ],
+    "lighthouseVersion": "13.6.0",
+    "fetchTime": "2026-11-11T11:36:00.033Z",
+    "report": "reports/lighthouse-live-contacts.report.html"
+  }
+]

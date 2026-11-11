@@ -1,0 +1,20 @@
+---
+import Brand from './Brand.astro';
+import { factory, phoneHref } from '../data/factory';
+const pathname = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <Brand />
+    <nav aria-label="Основная навигация" class="main-nav">
+      <a href="/produktsiya/" aria-current={pathname.startsWith('/produktsiya/') ? 'page' : undefined}>Продукция</a>
+      <a href="/#kak-zakazat">Как заказать</a>
+      <a href="/kontakty/" aria-current={pathname === '/kontakty/' ? 'page' : undefined}>Контакты</a>
+    </nav>
+    <div class="header-phone">
+      {phoneHref ? <a href={phoneHref}>{factory.phone}</a> : <span>{factory.phone}</span>}
+      <span class="small muted">{factory.demo ? 'Телефон появится после уточнения' : 'Связаться с заводом'}</span>
+    </div>
+  </div>
+{factory.demo && <div class="demo-bar"><div class="container"><span class="status-dot"></span><span>Демонстрационный сайт<span class="demo-detail"> · Реквизиты и изображения приведены для примера</span></span></div></div>}
+</header>

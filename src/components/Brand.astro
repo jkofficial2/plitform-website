@@ -1,0 +1,9 @@
+---
+interface Props { light?: boolean; }
+const { light = false } = Astro.props;
+---
+<a href="/" class:list={['brand', { 'brand-light': light }]}>
+  <svg class="brand-mark" width="45" height="45" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m5 14 19-10 19 10-19 10L5 14Zm0 10 19 10 19-10M5 34l19 10 19-10" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" /></svg>
+  <span><span class="brand-name">ПлитФорм<span class="brand-dot">.</span></span><span class="brand-description">ЗАВОД БЕТОННЫХ ПЛИТ</span></span>
+  <span class="sr-only"> — главная</span>
+</a>

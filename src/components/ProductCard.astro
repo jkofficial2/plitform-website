@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import type { Product } from '../data/products';
+import { productHref } from '../data/products';
+import Icon from './Icon.astro';
+interface Props { product: Product; eager?: boolean; }
+const { product, eager = false } = Astro.props;
+---
+<article class="product-card">
+  <a href={productHref(product.slug)} class="product-image-link" tabindex="-1" aria-hidden="true"><Image src={product.image} alt={product.alt} widths={[360, 640, 900]} sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1024px) 45vw, 31vw" width={640} height={480} format="webp" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async" /><span class="image-label">Демонстрационное изображение</span></a>
+  <div class="product-card-body"><div class="product-number">/{product.number}</div><h3><a href={productHref(product.slug)}>{product.name}</a></h3><p>{product.short}</p><a href={productHref(product.slug)} class="text-link">Подробнее <span class="sr-only">о категории «{product.name}»</span><Icon /></a></div>
+</article>
